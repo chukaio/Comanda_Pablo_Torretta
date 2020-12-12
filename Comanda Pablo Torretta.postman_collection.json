@@ -1,0 +1,1796 @@
+{
+	"info": {
+		"_postman_id": "7fb3e9a9-9753-41d5-84a7-db76c6e7aa21",
+		"name": "Comanda Pablo Torretta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Listar",
+					"item": [
+						{
+							"name": "ListarLoginEntreFechas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fecha1",
+											"value": "2020-06-22 15:48:25",
+											"type": "text"
+										},
+										{
+											"key": "fecha2",
+											"value": "2021-07-29 15:48:25",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/empleados/listarEntreFechasLogin",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"empleados",
+										"listarEntreFechasLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarCantOperacionesPorSector",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/empleados/cantidadOperacionesPorSector",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"empleados",
+										"cantidadOperacionesPorSector"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarCantOperacionesEmpleadosPorSector",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sector",
+											"value": "Bartender",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sector",
+											"value": "Socio",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sector",
+											"value": "Cocinero",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sector",
+											"value": "Cervecero",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sector",
+											"value": "Mozo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/empleados/cantidadOperacionesEmpleadosPorSector",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"empleados",
+										"cantidadOperacionesEmpleadosPorSector"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarRegistroEntreFechas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fecha1",
+											"value": "2020-06-22 15:48:25",
+											"type": "text"
+										},
+										{
+											"key": "fecha2",
+											"value": "2021-07-29 15:48:25",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/empleados/listarEntreFechasRegistro",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"empleados",
+										"listarEntreFechasRegistro"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AddEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "mozo2",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "mozo2",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Whirl",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "Mozo",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/empleados/registrarEmpleado/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"empleados",
+								"registrarEmpleado",
+								""
+							]
+						},
+						"description": "a"
+					},
+					"response": []
+				},
+				{
+					"name": "LoginEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "usuario",
+								"value": "socio3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "clave",
+								"value": "socio3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "bartender1",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "bartender1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/empleados/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"empleados",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendEmpleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{Token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/empleados/suspender/mozo2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"empleados",
+								"suspender",
+								"mozo2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmpleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/empleados/mozo2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"empleados",
+								"mozo2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificateEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "Mozo2",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Whirl",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "Mozo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/empleados/modificar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"empleados",
+								"modificar"
+							]
+						},
+						"description": "Requiere el campo id del empleadfo y permite modificarle los otros parametros siempre y cuando no exista ya en la db."
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmpleados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/empleados/listar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"empleados",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mesas",
+			"item": [
+				{
+					"name": "LIstar",
+					"item": [
+						{
+							"name": "ListarMasUsada",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/MasUsada",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"MasUsada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarMenosUsada",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/MenosUsada",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"MenosUsada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarMasFacturacion",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/MasFacturacion",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"MasFacturacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarMenosFacturacion",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/MenosFacturacion",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"MenosFacturacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarConFacturaMayorImporte",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/ConFacturaConMasImporte",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"ConFacturaConMasImporte"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarConFacturaMenorImporte",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/ConFacturaConMenosImporte",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"ConFacturaConMenosImporte"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarFacturacionEntreFechas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "LL666",
+											"type": "text"
+										},
+										{
+											"key": "fecha1",
+											"value": "2018-06-22 15:48:25",
+											"type": "text"
+										},
+										{
+											"key": "fecha2",
+											"value": "2021-06-22 15:48:25",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/mesas/FacturacionEntreFechas",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"FacturacionEntreFechas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarConMejorPuntuacion",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/ConMejorPuntuacion",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"ConMejorPuntuacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarConPeorPuntuacion",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/mesas/ConPeorPuntuacion",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"mesas",
+										"ConPeorPuntuacion"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AddMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "TP014",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/mesas/registrar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdjuntarFotoMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoMesa",
+									"value": "TP013",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/xampp/htdocs/BE/Comanda/Fotos/Mesas/TP013.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/mesas/foto",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"foto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMesa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/mesas/TP014",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"TP014"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarEstadoMesaEsperando",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/mesas/estadoEsperando/TP013",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"estadoEsperando",
+								"TP013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarEstadoMesaComiendo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "LL666",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/mesas/mesas/estadoComiendo/TP013",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"mesas",
+								"estadoComiendo",
+								"TP013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarEstadoMesaPagando",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/mesas/estadoPagando/TP013",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"estadoPagando",
+								"TP013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarEstadoMesaCobrando",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/mesas/cobrar/TP013",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"cobrar",
+								"TP013"
+							]
+						},
+						"description": "esta accion cambia el estado de la mesa a pagando y tambien al estado del pedido asociado a esta mesa lo cambia a finalizado e impide seguir cargando encuestas."
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarEstadoMesaCerrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/mesas/estadoCerrada/TP013",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"estadoCerrada",
+								"TP013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMesas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/mesas/listar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Menues",
+			"item": [
+				{
+					"name": "AddMenu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{Token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Daark Energon",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "999999",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "Cervecero",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/menu/registrar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"menu",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMenu",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/menu/9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"menu",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificateMenu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Dark Energon",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "999999",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "Cervecero",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/menu/modificar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"menu",
+								"modificar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMenues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/menu/listar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"menu",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Listar",
+					"item": [
+						{
+							"name": "ListarPedidosCancelados",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/listarCancelados",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"listarCancelados"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidosPorFecha",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fecha",
+											"value": "2020-12-12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/pedido/listarTodosPorFecha",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"listarTodosPorFecha"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidoPorMesa",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/listarPorMesa/TP013",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"listarPorMesa",
+										"TP013"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidosPendientes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/listarActivos",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"listarActivos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidoMasVendido",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/MasVendido",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"MasVendido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidosMenosVendidos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/MenosVendido",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"MenosVendido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarFueraTiempoEstipulado",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/listarFueraDelTiempoEstipulado",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"listarFueraDelTiempoEstipulado"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarTiempoRestante",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/pedido/tiempoRestante/h3qh0",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"pedido",
+										"tiempoRestante",
+										"h3qh0"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AddPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_mesa",
+									"value": "TP013",
+									"type": "text"
+								},
+								{
+									"key": "id_menu",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "nombre_cliente",
+									"value": "Lestat",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedido/registrar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedido",
+								"registrar"
+							]
+						},
+						"description": "Cambiar mensaje de texto para que alerte que sea el token de tipo empleado y no socio"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePedido",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "w551a",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedido/wbg1u",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedido",
+								"wbg1u"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TomarPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "uo6v5",
+									"type": "text"
+								},
+								{
+									"key": "minutosEstimados",
+									"value": "600",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedido/tomarPedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedido",
+								"tomarPedido"
+							]
+						},
+						"description": "Cambiar mensaje de texto para que alerte que sea el token de tipo BARTENDER, COCINERO y no socio"
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarEstadoPedidoListoParaServir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "uo6v5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedido/listoParaServir",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedido",
+								"listoParaServir"
+							]
+						},
+						"description": "Cambiar mensaje de texto para que alerte que sea el token de tipo BARTENDER y no socio"
+					},
+					"response": []
+				},
+				{
+					"name": "ServirPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "uo6v5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedido/servir",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedido",
+								"servir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPedidos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/pedido/listarTodos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedido",
+								"listarTodos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "GenerarFacturaPDF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fecha1",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fecha2",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/factura/listarVentasPDF",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"factura",
+								"listarVentasPDF"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GenerarFacturaExcel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/factura/listarVentasExcel",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"factura",
+								"listarVentasExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarFacturasEntreFechas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fecha1",
+									"value": "2020-06-22 15:48:25",
+									"type": "text"
+								},
+								{
+									"key": "fecha2",
+									"value": "2021-06-22 15:48:25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/factura/listarEntreFechas",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"factura",
+								"listarEntreFechas"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Encuestas",
+			"item": [
+				{
+					"name": "Listar",
+					"item": [
+						{
+							"name": "ListarEncuestas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/encuesta/listar",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"encuesta",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarEncuestaEntreFechas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fecha1",
+											"value": "2020-07-14 14:53:09",
+											"type": "text"
+										},
+										{
+											"key": "fecha2",
+											"value": "2021-07-14 14:59:09",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/encuesta/listarEntreFechas",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"encuesta",
+										"listarEntreFechas"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "RegisterEncuesta",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "puntuacionMesa",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "TP013",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionRestaurante",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMozo",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionCocinero",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "comentario",
+									"value": "Primer",
+									"type": "text"
+								},
+								{
+									"key": "idMozo",
+									"value": "24",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/encuesta/registrar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encuesta",
+								"registrar"
+							]
+						},
+						"description": "Las encuestas pueden ser cargadas siempre que el codigo de la mesa corresponda a un pedido que no se encuentre en estado Finalizado (ultimo registro).\r\nLas encuestas podran por lo tanto registrarse en cualquier estado hasta que ejecute el \"CobrarMesa (Revisar)\" que lo cambia a finalizado.\r\nPor lo tanto cambiar el mensaje que refleje que no se puede cargar encuestas si el cliente ya pago."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3aa1e20a-8a5e-41e7-802a-1873cc120d5c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0d0fa65c-57f9-4e1b-a3bf-321d79d3e0e9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

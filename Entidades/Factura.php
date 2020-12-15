@@ -110,7 +110,7 @@ class Factura
     public static function ListarExcel(){
         $excel = new Spreadsheet();
         $excel->getProperties()
-        ->setCreator("Ayelen Valdez")
+        ->setCreator("Pablo Torretta")
         ->setTitle("Listado de Ventas")
         ->setDescription("Listado de Ventas");
 

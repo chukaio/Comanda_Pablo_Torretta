@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7fb3e9a9-9753-41d5-84a7-db76c6e7aa21",
+		"_postman_id": "a8fb0ef3-da4e-482b-93e6-0eecee23944d",
 		"name": "Comanda AS",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -233,8 +233,7 @@
 								"registrarEmpleado",
 								""
 							]
-						},
-						"description": "a"
+						}
 					},
 					"response": []
 				},
@@ -261,12 +260,12 @@
 							"formdata": [
 								{
 									"key": "usuario",
-									"value": "bartender1",
+									"value": "mozo1",
 									"type": "text"
 								},
 								{
 									"key": "clave",
-									"value": "bartender1",
+									"value": "mozo1",
 									"type": "text"
 								}
 							]
@@ -868,8 +867,7 @@
 								"cobrar",
 								"TP013"
 							]
-						},
-						"description": "esta accion cambia el estado de la mesa a pagando y tambien al estado del pedido asociado a esta mesa lo cambia a finalizado e impide seguir cargando encuestas."
+						}
 					},
 					"response": []
 				},
@@ -1327,8 +1325,7 @@
 								"pedido",
 								"registrar"
 							]
-						},
-						"description": "Cambiar mensaje de texto para que alerte que sea el token de tipo empleado y no socio"
+						}
 					},
 					"response": []
 				},
@@ -1408,8 +1405,7 @@
 								"pedido",
 								"tomarPedido"
 							]
-						},
-						"description": "Cambiar mensaje de texto para que alerte que sea el token de tipo BARTENDER, COCINERO y no socio"
+						}
 					},
 					"response": []
 				},
@@ -1443,8 +1439,7 @@
 								"pedido",
 								"listoParaServir"
 							]
-						},
-						"description": "Cambiar mensaje de texto para que alerte que sea el token de tipo BARTENDER y no socio"
+						}
 					},
 					"response": []
 				},
@@ -1726,7 +1721,7 @@
 								},
 								{
 									"key": "puntuacionRestaurante",
-									"value": "10",
+									"value": "6",
 									"type": "text"
 								},
 								{
@@ -1736,12 +1731,12 @@
 								},
 								{
 									"key": "puntuacionCocinero",
-									"value": "10",
+									"value": "7",
 									"type": "text"
 								},
 								{
 									"key": "comentario",
-									"value": "Primer",
+									"value": "Prueba5",
 									"type": "text"
 								},
 								{
@@ -1761,8 +1756,7 @@
 								"encuesta",
 								"registrar"
 							]
-						},
-						"description": "Las encuestas pueden ser cargadas siempre que el codigo de la mesa corresponda a un pedido que no se encuentre en estado Finalizado (ultimo registro).\r\nLas encuestas podran por lo tanto registrarse en cualquier estado hasta que ejecute el \"CobrarMesa (Revisar)\" que lo cambia a finalizado.\r\nPor lo tanto cambiar el mensaje que refleje que no se puede cargar encuestas si el cliente ya pago."
+						}
 					},
 					"response": []
 				}
@@ -1774,7 +1768,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "3aa1e20a-8a5e-41e7-802a-1873cc120d5c",
+				"id": "0b4b35f6-e4e5-4bae-8832-853f453712d2",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1784,7 +1778,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "0d0fa65c-57f9-4e1b-a3bf-321d79d3e0e9",
+				"id": "fb59c0c8-863f-4eba-af0a-a957064f2014",
 				"type": "text/javascript",
 				"exec": [
 					""
